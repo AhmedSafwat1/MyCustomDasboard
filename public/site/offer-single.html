@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>baayte</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome-5all.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="warp">
+
+    <header>
+        <div class="top-head">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-auto col-sm-12">
+                        <ul class="social-media list-unstyled">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-snapchat-ghost"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-auto col-sm-12">
+                        <ul class="contact-info list-unstyled">
+                            <li class="list-inline-item">
+                                <a href="mailto: sales@beyti.com">
+                                    sales@beyti.com
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-head">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-9">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand"
+                               href="#">
+                                <img src="images/logo.png">
+                            </a>
+                            <button class="navbar-toggler btn-block"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbar"
+                                    aria-controls="navbar"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse"
+                                 id="navbar">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">الرئيسية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">فلل</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">تمليك</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">ايجار</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">الاستشارة</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">من نحن</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">اتصل بنا</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="head-main-links">
+                            <div class="account">
+                                <div class="dropdown">
+                                    <button class="btn"
+                                            type="button"
+                                            id="account-list"
+                                            data-toggle="dropdown"
+                                    >
+                                        <img src="images/avatar.png">
+                                        اصيل الدعلوج
+                                    </button>
+                                    <div class="dropdown-menu"
+                                         aria-labelledby="account-list">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="add-ad" href="#">
+                                <i class="fas fa-plus-circle"></i>
+                                أضف اعلانك
+                            </a>
+                            <a class="lang-flag" href="#">
+                                <img src="images/lang-flag-en.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-area">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                    <h1>الاعلانات</h1>
+                </div>
+                <div class="col-auto ">
+                    <div class="breadcrumb-links">
+                        <a href="#">الرئيسية</a>
+                        <a href="#">الاعلانات</a>
+                        <span>اسم الاعلان</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-single">
+        <div class="offer-single-head">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <div class="offer-single-head-info">
+                            <h4 class="offer-single-head-info-tit">
+                                <i class="fas fa-home"></i>
+                                فيلا للبيع في شارع خليفه العتيبي ، حي القيروان ، الرياض
+                            </h4>
+                            <div class="offer-single-head-info-price">
+                                <i class="far fa-money-bill-alt"></i>
+                                500.000
+                                <div class="currency-change">
+                                    <select class="js-select" name="state">
+                                        <option>ريال سعودى</option>
+                                        <option value="AL">ريال سعودى</option>
+                                        <option value="WY">ريال سعودى</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="offer-single-head-details d-flex justify-content-end">
+                            <div class="offer-single-wishlist">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="offer-single-email">
+                                <a href="#">
+                                    <i class="fas fa-envelope"></i>
+                                    ارسال رسالة
+                                </a>
+                            </div>
+                            <div class="offer-single-call">
+                                <a href="#">
+                                    <i class="fas fa-phone"></i>
+                                    طلب اتصال
+                                </a>
+                            </div>
+                        </div>
+                        <div class="offer-single-rating text-left">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer-single-images">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="offer-single-images-thumb">
+                            <img class="img-fluid" src="images/slid-01.png">
+                            <div class="offer-single-images-thumb-feature d-flex align-items-start flex-column">
+                                <div class="offer-single-tot-rating">
+                                    <div class=" d-flex align-items-center">
+                                        <span class="rate-num">8.5</span>
+                                        <div class="">
+                                            <div class="fc-org">ممتاز</div>
+                                            <div class="tot-rate-num">20 تقييم</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="offer-single-offer">عرض خاص</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="offer-single-images-sec">
+                            <img class="img-fluid" src="images/slid-01.png">
+                            <img class="img-fluid" src="images/slid-01.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-single-carousel owl-carousel">
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                    <div class="offerItem">
+                        <img src="images/slid-01.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer-single-des offer-single-widgets">
+            <div class="container">
+                <div class="d-flex align-items-stretch ">
+                    <div class="col-md-8">
+                        <div class="offer-single-widget offer-single-des-main h-100">
+                            <h6 class="offer-single-widget-tit ">وصف الاعلان</h6>
+                            <div class="offer-single-des-info">
+                                للبيع فيلا فااااااااخرة بحي القيروان موقع ممتاز جدآ تشطيب سوبر لوكس بناء شخصى تصميم فاخر
+                                واجهة حجر ديكورات للفيلا بالكامل مكونه من غرفة سواق مدخل سيارة حوش ملحق خارجي مجلس رجال
+                                ومجلس نساء ومقلط وصالة ومطبخ داخلى وخارجي وغرفة شغاله وغرفة كبار سن بحمام الدور العلوي
+                                غرفتين نوم كبار وصالة السطح غرفة نوم ماستر بحمام وغرفة غسيل واجهة شرقية للبيع فيلا
+                                فااااااااخرة بحي القيروان موقع ممتاز جدآ تشطيب سوبر لوكس
+
+                            </div>
+                            <a class="offer-single-des-link "
+                               href="#">
+                                اقرأ المزيد
+                                <i class="fas fa-angle-double-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="offer-single-details">
+                            <div class="offer-single-details-item ">
+                                <h6>مساحة البناء</h6>
+                                <div class="offer-single-details-item-main d-flex align-items-center">
+                                    <i class="fas fa-th-large"></i>
+                                    <div class="offer-single-details-item-data text-center">
+                                        550 م² - 1050 م²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offer-single-details-item ">
+                                <h6>مساحة العقار</h6>
+                                <div class="offer-single-details-item-main d-flex align-items-center">
+                                    <i class="fas fa-th-large"></i>
+                                    <div class="offer-single-details-item-data text-center">
+                                        250 م² - 450 م²
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offer-single-details-item ">
+                                <h6>متوسط السعر</h6>
+                                <div class="offer-single-details-item-main d-flex align-items-center">
+                                    <i class="fas fa-money-bill-wave-alt"></i>
+                                    <div class="offer-single-details-item-data text-center">
+                                        3,858,827 - 5,964,543
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offer-single-details-item ">
+                                <h6>النوع</h6>
+                                <div class="offer-single-details-item-main d-flex align-items-center">
+                                    <i class="fas fa-home"></i>
+                                    <div class="offer-single-details-item-data text-center">
+                                        فيلا للبيع
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer-single-feature">
+            <div class="container">
+                <div class="offer-single-widget ">
+                    <h6 class="offer-single-widget-tit ">ميزات</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-01.png">
+                                </div>
+                                <div>
+                                    الغرف : 3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-02.png">
+                                </div>
+                                <div>
+                                    غرف اخرى : 3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-03.png">
+                                </div>
+                                <div>
+                                    سعة موقف السيارات : 2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-04.png">
+                                </div>
+                                <div>
+                                    رقم الدور : 2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-05.png">
+                                </div>
+                                <div>
+                                    متوفر ماء
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-06.png">
+                                </div>
+                                <div>
+                                    متوفر كهرباء
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-07.png">
+                                </div>
+                                <div>
+                                    متوفر مصعد
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-08.png">
+                                </div>
+                                <div>
+                                    متوفر غاز
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-09.png">
+                                </div>
+                                <div>
+                                    سكنى
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-10.png">
+                                </div>
+                                <div>
+                                    متوفر تكيف
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-11.png">
+                                </div>
+                                <div>
+                                    متوفر سكن عزاب
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="offer-single-feature-item d-flex align-items-center">
+                                <div class="offer-single-feature-item-thumb">
+                                    <img src="images/offer-single-feature-12.png">
+                                </div>
+                                <div>
+                                    تشطيب سوبر لوكس
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer-single-map">
+            <div class="container">
+                <div class="offer-single-widget ">
+                    <h6 class="offer-single-widget-tit">مكان الموقع على الخريطة</h6>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3626.6038053430098!2d46.6945904!3d24.6373366!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1427327522631"></iframe>
+
+                </div>
+            </div>
+        </div>
+        <div class="offer-single-near-ser">
+            <div class="container">
+                <div class="offer-single-widget ">
+                    <h6 class="offer-single-widget-tit">مكان الموقع على الخريطة</h6>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th class="text-center" scope="col">
+                                    <i class="fas fa-align-right"></i>
+                                </th>
+                                <th scope="col">المكان</th>
+                                <th class="text-center" scope="col">المسافة</th>
+                                <th class="text-center" scope="col">رقم الهاتف</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th class="text-center" scope="row"><i class="fas fa-school"></i></th>
+                                <td>مدرسة أبو حنيفة الابتدائية</td>
+                                <td class="text-center">1.5 كم</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">
+                                    <i class="fas fa-hospital-symbol"></i>
+                                </th>
+                                <td>مستشفى مجمع الايمان</td>
+                                <td class="text-center">1.5 كم</td>
+                                <td class="text-center">456987125</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">
+                                    <i class="fas fa-coffee"></i>
+                                </th>
+                                <td>مطار</td>
+                                <td class="text-center">1.5 كم</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">
+                                    <i class="fas fa-helicopter"></i>
+                                </th>
+                                <td>كافية</td>
+                                <td class="text-center">1.5 كم</td>
+                                <td class="text-center">456987125</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center" scope="row">
+                                    <i class="fas fa-gas-pump"></i>
+                                </th>
+                                <td>محطة وقود</td>
+                                <td class="text-center">1.5 كم</td>
+                                <td class="text-center">-</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer-single-relative">
+            <div class="container">
+                <h6 class="offer-single-relative-tit"><span>عقارات مماثلة</span></h6>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="latest-building-item">
+                            <div class="latest-building-item-thumb">
+                                <a class="d-block" href="">
+                                    <img class="img-fluid" src="images/building-type-item-thumb.png">
+                                </a>
+                            </div>
+                            <div class="latest-building-item-body">
+                                <a class="latest-building-item-type" href="#">شقة للايجار</a>
+                                <h6 class="latest-building-item-body-price">1500 ر.س</h6>
+                                <ul class="latest-building-item-details list-unstyled">
+                                    <li class="list-inline-item">غرفتان نوم</li>
+                                    <li class="list-inline-item">2 حمام</li>
+                                    <li class="list-inline-item">صالة كبيرة</li>
+                                    <li class="list-inline-item">جنينة</li>
+                                </ul>
+                                <ul class="latest-building-item-info list-unstyled">
+                                    <li class="list-inline-item">
+                                        <i class="fas fa-user"></i>
+                                        اسم المعلن
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        المدينة
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="far fa-clock"></i>
+                                        منذ 5 دقائق
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="latest-building-item">
+                            <div class="latest-building-item-thumb">
+                                <a class="d-block" href="">
+                                    <img class="img-fluid" src="images/building-type-item-thumb.png">
+                                </a>
+                            </div>
+                            <div class="latest-building-item-body">
+                                <a class="latest-building-item-type" href="#">شقة للايجار</a>
+                                <h6 class="latest-building-item-body-price">1500 ر.س</h6>
+                                <ul class="latest-building-item-details list-unstyled">
+                                    <li class="list-inline-item">غرفتان نوم</li>
+                                    <li class="list-inline-item">2 حمام</li>
+                                    <li class="list-inline-item">صالة كبيرة</li>
+                                    <li class="list-inline-item">جنينة</li>
+                                </ul>
+                                <ul class="latest-building-item-info list-unstyled">
+                                    <li class="list-inline-item">
+                                        <i class="fas fa-user"></i>
+                                        اسم المعلن
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        المدينة
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="far fa-clock"></i>
+                                        منذ 5 دقائق
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="latest-building-item">
+                            <div class="latest-building-item-thumb">
+                                <a class="d-block" href="">
+                                    <img class="img-fluid" src="images/building-type-item-thumb.png">
+                                </a>
+                            </div>
+                            <div class="latest-building-item-body">
+                                <a class="latest-building-item-type" href="#">شقة للايجار</a>
+                                <h6 class="latest-building-item-body-price">1500 ر.س</h6>
+                                <ul class="latest-building-item-details list-unstyled">
+                                    <li class="list-inline-item">غرفتان نوم</li>
+                                    <li class="list-inline-item">2 حمام</li>
+                                    <li class="list-inline-item">صالة كبيرة</li>
+                                    <li class="list-inline-item">جنينة</li>
+                                </ul>
+                                <ul class="latest-building-item-info list-unstyled">
+                                    <li class="list-inline-item">
+                                        <i class="fas fa-user"></i>
+                                        اسم المعلن
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        المدينة
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <i class="far fa-clock"></i>
+                                        منذ 5 دقائق
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-banner-item">
+                        <a class="d-block" href="#">
+                            <img class="img-fluid" src="images/slid-01.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-banner-item">
+                        <a class="d-block" href="#">
+                            <img class="img-fluid" src="images/slid-01.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="clients">
+            <div class="container">
+                <div class="d-flex clients-container">
+                    <div class="col-md-9 no-padding">
+                        <div class="client-slider owl-carousel">
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                            <div class="clientItem">
+                                <img src="images/client-item.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-none d-lg-block d-sm-none">
+                        <img class="baayte-app" src="images/baayte-app.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="foot-widget">
+                            <h5 class="foot-widget-tit">القائمة البريدية</h5>
+                            <div class="foot-widget-newsletter">
+                                <p class="foot-widget-newsletter-tit">اشترك معنا فى القائمة البريدية</p>
+                                <form>
+                                    <input type="email" placeholder="بريدك الالكترونى">
+                                    <input type="submit" value="ارسل">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="foot-widget">
+                            <h5 class="foot-widget-tit">روابط اخرى</h5>
+                            <ul class="foot-widget-list list-unstyled">
+                                <li><a href="#">شقق للبيع</a></li>
+                                <li><a href="#">شقق للايجار</a></li>
+                                <li><a href="#">فلل للبيع</a></li>
+                                <li><a href="#">اراضى للبيع</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="foot-widget">
+                            <h5 class="foot-widget-tit">تواصل معنا</h5>
+                            <ul class="foot-widget-info list-unstyled">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    الرياض - المملكة العربية السعودية
+                                </li>
+                                <li>
+                                    <a href="mailto:sales@beyti.com">
+                                        <i class="fas fa-envelope"></i>
+                                        sales@beyti.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:09005656252424">
+                                        <i class="fas fa-phone"></i>
+                                        09005656252424
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled foot-social-media">
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <div class="site-copyright">
+                            <a href="#">جميع الحقوق محفوظة لموقع <span class="fc-org">بيتى</span></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="efadh">
+                            <a href="https://www.efadh.com/">
+                                تصميم وبرمجة <span class="fc-org">شركة إفادة لتقنية المعلومات</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</main>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scrollreveal.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/plugin.js"></script>
+</body>
+</html>

@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>baayte</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome-5all.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="warp">
+
+    <header>
+        <div class="top-head">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-auto col-sm-12">
+                        <ul class="social-media list-unstyled">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-snapchat-ghost"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-auto col-sm-12">
+                        <ul class="contact-info list-unstyled">
+                            <li class="list-inline-item">
+                                <a href="mailto: sales@beyti.com">
+                                    sales@beyti.com
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-head">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-md-9">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand"
+                               href="#">
+                                <img src="images/logo.png">
+                            </a>
+                            <button class="navbar-toggler btn-block"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbar"
+                                    aria-controls="navbar"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse"
+                                 id="navbar">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">الرئيسية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">فلل</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">تمليك</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">ايجار</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">الاستشارة</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">من نحن</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">اتصل بنا</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="head-main-links">
+                            <div class="account">
+                                <div class="dropdown">
+                                    <button class="btn"
+                                            type="button"
+                                            id="account-list"
+                                            data-toggle="dropdown"
+                                    >
+                                        <img src="images/avatar.png">
+                                        اصيل الدعلوج
+                                    </button>
+                                    <div class="dropdown-menu"
+                                         aria-labelledby="account-list">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="add-ad" href="#">
+                                <i class="fas fa-plus-circle"></i>
+                                أضف اعلانك
+                            </a>
+                            <a class="lang-flag" href="#">
+                                <img src="images/lang-flag-en.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-area">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                    <h1>الاعلانات</h1>
+                </div>
+                <div class="col-auto ">
+                    <div class="breadcrumb-links">
+                        <a href="#">الرئيسية</a>
+                        <span>الاعلانات</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offers-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="offers-page-sidebar">
+                        <div class="offers-sidebar-search-widget">
+                            <h6 class="offers-page-sidebar-widget-tit fc-org">التصفيات</h6>
+                            <form>
+                                <div class="form-group">
+                                    <label for="building-place">موقع العقار</label>
+                                    <input type="text"
+                                           id="building-place"
+                                           class="form-control"
+                                           placeholder="موقع العقار">
+                                </div>
+                                <div class="form-group">
+                                    <label>لاختيار الموقع</label>
+                                    <select class="js-select form-control">
+                                        <option>لاختيار الموقع</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>نوع العقار</label>
+                                    <select class="js-select form-control">
+                                        <option>اختر نوعية العقار</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>نطاق الأسعار</label>
+                                    <div class="range-slider-holder">
+                                        <div class="range-slider"
+                                             data-min="-100"
+                                             data-max="0"
+                                             data-value1="-80"
+                                             data-value2="-20"></div>
+                                        <input type="number" class="out from"/>
+                                        <span class="out cur">ريال</span>
+                                        <input type="number" class="out to"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>نطاق المساحات</label>
+                                    <div class="range-slider-holder">
+                                        <div class="range-slider"
+                                             data-min="-100"
+                                             data-max="0"
+                                             data-value1="-80"
+                                             data-value2="-20"></div>
+                                        <input type="number" class="out from"/>
+                                        <span class="out cur">متر</span>
+                                        <input type="number" class="out to"/>
+                                    </div>
+                                </div>
+                                <input type="submit" value="إبحث">
+                            </form>
+                        </div>
+                        <div class="offers-sidebar-search-widget">
+                            <h6 class="offers-page-sidebar-widget-tit fc-org">التصنيف حسب :</h6>
+                            <form>
+                                <div class="checkbox-item">
+                                    <p>نقاط تقييم الموقع</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio1"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio1">
+                                            موقع ممتاز
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio2"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio2">
+                                            موقع جيد جدا
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio3"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio3">
+                                            موقع جيد
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio4"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio4">
+                                            موقع مرضى
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <p>مصفيات رائجة</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio5"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio5">
+                                            الشقق
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio6"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio6">
+                                            فنادق
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio7"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio7">
+                                            مقابلة للشاطئ.
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio8"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio8">
+                                            واي فاي مجانى
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio9"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio9">
+                                            واي فاي مجانى
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <p>أفكار لأوقات من المرح</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio10"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio10">
+                                            ساونا
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio11"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio11">
+                                            مركز للياقة البدنية
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio12"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio12">
+                                            مسبح داخلى
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio13"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio13">
+                                            غرفة بخار
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <p>المنطقة</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio14"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio14">
+                                            الرياض
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio15"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio15">
+                                            مكة المكرمة
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio16"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio16">
+                                            المدينة المنورة
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio17"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio17">
+                                            القصيم
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <p>أنواع العقارات</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio18"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio18">
+                                            شقق
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio19"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio19">
+                                            شقق مفروشة
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio20"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio20">
+                                            فلل
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio21"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio21">
+                                            شاليهات
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <p>مستوى السعر</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio22"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio22">
+                                            اقتصادى
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio23"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio23">
+                                            متوسط
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio24"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio24">
+                                            مرتفع
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-item">
+                                    <p>حالة الانشاء</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio25"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio25">
+                                            تحت الانشاء
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio26"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio26">
+                                            تم الانشاء
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="checkbox-item">
+                                    <p>عد الغرف</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio27"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio27">
+                                            2 غرفة
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio28"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio28">
+                                            3 غرفة
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio29"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio29">
+                                            4 غرفة
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div class="checkbox-item">
+                                    <p>المفروشات</p>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio30"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio30">
+                                            مفروش
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox"
+                                               id="customRadio31"
+                                               name="customRadio"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label"
+                                               for="customRadio31">
+                                            غير مفروش
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="search-results">
+                        <div class="search-results-head">
+                            <div class="row align-items-center">
+                                <div class="col-md-9">
+                                    <h4 class="">
+                                        المدينة المنورة : وجدنا 187 مكان إقامة
+                                    </h4>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="confirm-details-widget">
+                                        <div class="confirm-details-widget-map text-center"
+                                             style="background-image: url('images/map-img.png')">
+                                            <a href="#">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <p class="on-map-tit">على الخريطة</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-results-items">
+                            <div class="tab">
+                                <ul class="tabs d-flex list-unstyled ">
+                                    <li><a href="#">افضل ما اخترناه</a></li>
+                                    <li><a href="#">اقل الاسعار</a></li>
+                                    <li><a href="#">الافضل تقييما</a></li>
+                                    <li><a href="#">الاكثر مبيعا</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tabs-item">
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs-item">
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs-item">
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs-item">
+                                        <div class="search-results-item">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="search-results-item-thumb">
+                                                        <a class="d-block" href="#">
+                                                            <img src="images/building-type-item-thumb.png">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="search-results-item-main">
+                                                        <div class="search-results-item-main-info">
+                                                            <div class="row justify-content-between">
+                                                                <div class="col">
+                                                                    <div class="search-results-item-main-info-head">
+                                                                        <h6 class="search-results-item-tit">
+                                                                            <a href="#">
+                                                                                شقه 138م في عمارات رابعه
+                                                                            </a>
+                                                                        </h6>
+                                                                        <p class="search-results-item-map">
+                                                                            <a href="#">
+                                                                                <i class="fas fa-map-marker-alt"></i>
+                                                                                شقة للايجار – اعرض على الخارطة
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="search-results-item-last-book">
+                                                                            أحدث الحجوزات: قبل 3 دقائق
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="hotel-item-rating d-flex align-items-center">
+                                                                        <span class="rate-num">8.5</span>
+                                                                        <div class="">
+                                                                            <div class="text-green-l">ممتاز</div>
+                                                                            <div class="">20 تقييم</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="search-results-item-info list-unstyled">
+                                                            <li class="list-inline-item">شقة</li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-bed.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                3
+                                                                <img src="images/icon-bath.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                2
+                                                                <img src="images/icon-shower.png">
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                500 قدم مربع
+                                                            </li>
+                                                        </ul>
+                                                        <h6 class="fc-org search-results-item-price">
+                                                            1500 ريال سعودى
+                                                        </h6>
+                                                        <div class="search-results-item-contact">
+                                                            <a href="#">
+                                                                <i class="fas fa-phone"></i>
+                                                                إتصل
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-envelope"></i>
+                                                                البريد الالكترونى
+                                                            </a>
+                                                            <a href="#">
+                                                                <i class="fas fa-heart"></i>
+                                                                حفظ
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pageNav">
+                                <span>1</span>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-banner-item">
+                        <a class="d-block" href="#">
+                            <img class="img-fluid" src="images/slid-01.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-banner-item">
+                        <a class="d-block" href="#">
+                            <img class="img-fluid" src="images/slid-01.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="clients">
+            <div class="container">
+                <div class="d-flex clients-container">
+                    <div class="col-md-9 no-padding">
+                        <a class="client-item" href="#">
+                            <img src="images/client-item.png">
+                        </a>
+                        <a class="client-item" href="#">
+                            <img src="images/client-item.png">
+                        </a>
+                        <a class="client-item" href="#">
+                            <img src="images/client-item.png">
+                        </a>
+                        <a class="client-item" href="#">
+                            <img src="images/client-item.png">
+                        </a>
+                        <a class="client-item" href="#">
+                            <img src="images/client-item.png">
+                        </a>
+
+                    </div>
+                    <div class="col-md-3 d-none d-lg-block d-sm-none">
+                        <img class="baayte-app" src="images/baayte-app.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="foot-widget">
+                            <h5 class="foot-widget-tit">القائمة البريدية</h5>
+                            <div class="foot-widget-newsletter">
+                                <p class="foot-widget-newsletter-tit">اشترك معنا فى القائمة البريدية</p>
+                                <form>
+                                    <input type="email" placeholder="بريدك الالكترونى">
+                                    <input type="submit" value="ارسل">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="foot-widget">
+                            <h5 class="foot-widget-tit">روابط اخرى</h5>
+                            <ul class="foot-widget-list list-unstyled">
+                                <li><a href="#">شقق للبيع</a></li>
+                                <li><a href="#">شقق للايجار</a></li>
+                                <li><a href="#">فلل للبيع</a></li>
+                                <li><a href="#">اراضى للبيع</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="foot-widget">
+                            <h5 class="foot-widget-tit">تواصل معنا</h5>
+                            <ul class="foot-widget-info list-unstyled">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    الرياض - المملكة العربية السعودية
+                                </li>
+                                <li>
+                                    <a href="mailto:sales@beyti.com">
+                                        <i class="fas fa-envelope"></i>
+                                        sales@beyti.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:09005656252424">
+                                        <i class="fas fa-phone"></i>
+                                        09005656252424
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled foot-social-media">
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a target="_blank" href="#">
+                                        <i class="fab fab fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <div class="site-copyright">
+                            <a href="#">جميع الحقوق محفوظة لموقع <span class="fc-org">بيتى</span></a>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="efadh">
+                            <a href="https://www.efadh.com/">
+                                تصميم وبرمجة <span class="fc-org">شركة إفادة لتقنية المعلومات</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</main>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scrollreveal.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/plugin.js"></script>
+</body>
+</html>
