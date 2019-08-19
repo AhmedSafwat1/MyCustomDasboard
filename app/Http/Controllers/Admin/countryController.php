@@ -26,7 +26,7 @@ class countryController extends Controller
      */
     public function index()
     {
-        $data   = Country::with(['Cities', 'Neighborhoods'])->OrderBy('title', 'asc')->get();
+        $data   = Country::with(['Cities'])->OrderBy('title_ar', 'asc')->get();
         $roles  = Role::latest()->get();
         return view('dashboard.country.index', compact('data', 'roles'));
     }
@@ -42,14 +42,22 @@ class countryController extends Controller
 
         // Validation rules
         $rules = [
-            'title'              => 'required|min:2|max:255',
+            'title_ar'              => 'required|min:2|max:255',
+            'title_en'              => 'required|min:2|max:255',
+            'code'               => 'required|min:2|max:10',
         ];
 
         // Validator messages
         $messages = [
-            'title.required'     => 'الاسم مطلوب',
-            'title.min'          => 'الاسم لابد ان يكون اكبر من حرفين',
-            'title.max'          => 'الاسم لابد ان يكون اصغر من 255 حرف',
+            'title_ar.required'     => 'الاسم بالعربية مطلوب',
+            'title_ar.min'          => 'الاسم بالعربية لابد ان يكون اكبر من حرفين',
+            'title_ar.max'          => 'الاسم بالعربية لابد ان يكون اصغر من 255 حرف',
+            'title_en.required'     => 'الاسم بالأنجليزية مطلوب',
+            'title_en.min'          => 'الاسم بالأنجليزية لابد ان يكون اكبر من حرفين',
+            'title_en.max'          => 'الاسم بالأنجليزية لابد ان يكون اصغر من 255 حرف',
+            'code.required'     => 'كود البلد مطلوب',
+            'code.min'          => 'كود البلد لابد ان يكون اكبر من حرفين',
+            'code.max'          => 'كود البلد لابد ان يكون اصغر من 10 حروف',
         ];
 
         // Validation
@@ -62,7 +70,9 @@ class countryController extends Controller
 
         //store country
         $add = new Country;
-        $add->title = $request->title;
+        $add->title_ar = $request->title_ar;
+        $add->title_en = $request->title_en;
+        $add->code  = $request->code;
         $add->save();
 
         addReport(auth()->user()->id, 'باضافة بلد جديدة', $request->ip());
@@ -75,14 +85,22 @@ class countryController extends Controller
 
         // Validation rules
         $rules = [
-            'title'              => 'required|min:2|max:255',
+            'title_ar'              => 'required|min:2|max:255',
+            'title_en'              => 'required|min:2|max:255',
+            'code'               => 'required|min:2|max:10',
         ];
 
         // Validator messages
         $messages = [
-            'title.required'     => 'الاسم مطلوب',
-            'title.min'          => 'الاسم لابد ان يكون اكبر من حرفين',
-            'title.max'          => 'الاسم لابد ان يكون اصغر من 255 حرف',
+            'title_ar.required'     => 'الاسم بالعربية مطلوب',
+            'title_ar.min'          => 'الاسم بالعربية لابد ان يكون اكبر من حرفين',
+            'title_ar.max'          => 'الاسم بالعربية لابد ان يكون اصغر من 255 حرف',
+            'title_en.required'     => 'الاسم بالأنجليزية مطلوب',
+            'title_en.min'          => 'الاسم بالأنجليزية لابد ان يكون اكبر من حرفين',
+            'title_en.max'          => 'الاسم بالأنجليزية لابد ان يكون اصغر من 255 حرف',
+            'code.required'     => 'كود البلد مطلوب',
+            'code.min'          => 'كود البلد لابد ان يكون اكبر من حرفين',
+            'code.max'          => 'كود البلد لابد ان يكون اصغر من 10 حروف',
         ];
 
         // Validation
@@ -95,7 +113,9 @@ class countryController extends Controller
 
         //store country
         $add = Country::findOrFail($request->id);
-        $add->title = $request->title;
+        $add->title_ar = $request->title_ar;
+        $add->title_en = $request->title_en;
+        $add->code  = $request->code;
         $add->save();
 
         addReport(auth()->user()->id, 'بتعديل بيانات البلد', $request->ip());

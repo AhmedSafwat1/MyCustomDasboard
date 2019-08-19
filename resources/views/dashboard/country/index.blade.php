@@ -58,8 +58,8 @@
                             <input type="checkbox" id="checkedAll" style="margin-right: 10px">
                         </th>
                         <th>أسم البلد</th>
-                        <th>عدد المدن</th>
-                        <th>عدد الأحياء</th>
+                        <th>كود البلد</th>
+                        {{--<th>عدد المدن</th>--}}
                         <th>تاريخ التسجيل</th>
                         <th>التحكم</th>
                     </tr>
@@ -71,16 +71,18 @@
                                 <input type="checkbox" class="form-check-label checkSingle" id="{{$item->id}}">
                             </td>
                             
-                            <td>{{$item->title}}</td>
-                            <td>{{$item->Cities->count()}}</td>
-                            <td>{{$item->Neighborhoods->count()}}</td>
+                            <td>{{$item->title_en}}</td>
+                            <td>{{$item->code}}</td>
+{{--                            <td>{{$item->Cities->count()}}</td>--}}
                             <td>{{$item->created_at->diffForHumans()}}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="#edit" class="edit btn btn-success" data-animation="fadein" data-plugin="custommodal"
                                         data-overlaySpeed="100" data-overlayColor="#36404a" style="color: #c89e28; font-weight: bold;"
                                         data-id = "{{$item->id}}"
-                                        data-title = "{{$item->title}}"
+                                        data-title_ar = "{{$item->title_ar}}"
+                                        data-title_en = "{{$item->title_en}}"
+                                        data-code = "{{$item->code}}"
                                     >
                                         <i class="fa fa-cogs"></i>
                                     </a>
@@ -113,10 +115,22 @@
             {{csrf_field()}}
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-4">
                         <div class="form-group">
-                            <label for="field-1" class="control-label">الاسم</label>
-                            <input type="text" autocomplete="nope" name="title" required class="form-control">
+                            <label for="field-1" class="control-label">الاسم بالعربية</label>
+                            <input type="text" autocomplete="nope" name="title_ar" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="field-1" class="control-label">الاسم بالأنجليزية</label>
+                            <input type="text" autocomplete="nope" name="title_en" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="field-1" class="control-label">كود البلد</label>
+                            <input type="text" autocomplete="nope" name="code" required class="phone form-control">
                         </div>
                     </div>
                 </div>
@@ -141,10 +155,22 @@
             <input type="hidden" name="id" value="">
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-4">
                         <div class="form-group">
-                            <label for="field-1" class="control-label">الاسم</label>
-                            <input type="text" autocomplete="nope" name="title" id="title" required class="form-control">
+                            <label for="field-1" class="control-label">الاسم بالعربية</label>
+                            <input type="text" autocomplete="nope" name="title_ar" id="title_ar" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="field-1" class="control-label">الاسم بالأنجليزية</label>
+                            <input type="text" autocomplete="nope" name="title_en" id="title_en" required class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="field-1" class="control-label">كود البلد</label>
+                            <input type="text" autocomplete="nope" name="code" id="code" required class="phone form-control">
                         </div>
                     </div>
                 </div>
@@ -161,13 +187,13 @@
             <span>&times</span><span class="sr-only" style="color: #f7f7f7">Close</span>
         </button>
         <h4 class="custom-modal-title">حذف دولة</h4>
-        <div class="custombox-modal-container" style="width: 400px !important; height: 175px;">
+        <div class="custombox-modal-container" style="height: 175px;">
             <div class="row">
                 <div class="col-sm-12">
                     <h3 style="margin-top: 35px">
                         هل تريد مواصلة عملية الحذف ؟
                     </h3>
-                    <span style="color: red">عند حذف دولة يتم حذف المدن والأحياء والعقارات التابعة لها !!</span>
+                    <span style="color: red">عند حذف دولة يتم حذف المدن والخدمات التابعة لها !!</span>
                 </div>
             </div>
             <div class="row">
@@ -187,13 +213,13 @@
             <span>&times</span><span class="sr-only" style="color: #f7f7f7">Close</span>
         </button>
         <h4 class="custom-modal-title">حذف المحدد</h4>
-        <div class="custombox-modal-container" style="width: 400px !important; height: 175px;">
+        <div class="custombox-modal-container" style="height: 175px;">
             <div class="row">
                 <div class="col-sm-12">
                     <h3 style="margin-top: 35px">
                         هل تريد مواصلة عملية الحذف ؟
                     </h3>
-                    <span style="color: red">عند حذف دولة يتم حذف المدن والأحياء والعقارات التابعة لها !!</span>
+                    <span style="color: red">عند حذف دولة يتم حذف المدن والخدمات التابعة لها !!</span>
                 </div>
             </div>
             <div class="row">
@@ -212,10 +238,14 @@
         $('.edit').on('click',function(){
             //get valus
             let id          = $(this).data('id');
-            let title       = $(this).data('title');
+            let title_ar       = $(this).data('title_ar');
+            let title_en       = $(this).data('title_en');
+            let code       = $(this).data('code');
 
             $("input[name='id']").val(id);
-            $("#title").val(title);
+            $("#code").val(code);
+            $("#title_en").val(title_en);
+            $("#title_ar").val(title_ar);
         });
 
         $('.delete').on('click',function(){

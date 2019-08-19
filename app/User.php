@@ -40,4 +40,10 @@ class User extends Authenticatable
     {
         return appPath() . '/images/users/' . $this->avatar;
     }
+
+
+    public function Devices()
+    {
+        return $this->hasMany('App\Models\Device', 'user_id', 'id');
+    }
 }

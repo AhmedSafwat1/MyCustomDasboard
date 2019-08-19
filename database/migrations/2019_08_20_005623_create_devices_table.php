@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAppSeetingsTable extends Migration
+class CreateDevicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateAppSeetingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('app_settings', function (Blueprint $table) {
+        Schema::create('devices', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('key');
-            $table->longText('value');
+            $table->string('device_type', 50)->nullable();
+            $table->string('device_id')->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')
+                ->on('users')->onDelete('cascade');
             $table->timestamps();
         });
-
-        $setting = new \App\Models\AppSetting();
-        $setting->key = 'site_name';
-        $setting->value = 'اوامر الشبكة';
-        $setting->save();
     }
 
     /**
@@ -33,6 +31,6 @@ class CreateAppSeetingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('app_seetings');
+        Schema::dropIfExists('devices');
     }
 }

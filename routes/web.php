@@ -273,82 +273,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         ]);
 
 
-        #city
-        Route::get('/cities', [
-            'uses' => 'cityController@index',
-            'as' => 'cities',
-            'title' => 'المدن',
-            'icon' => '<i class="fa fa-globe"></i>',
-            'child' => [
-                'addcity',
-                'updatecity',
-                'deletecity',
-                'deletecities',
-            ]
-        ]);
-
-        Route::post('/add-city', [
-            'uses' => 'cityController@store',
-            'as' => 'addcity',
-            'title' => 'اضافة مدينة'
-        ]);
-
-        Route::post('/update-city', [
-            'uses' => 'cityController@update',
-            'as' => 'updatecity',
-            'title' => 'تعديل مدينة'
-        ]);
-
-        Route::post('/delete-city', [
-            'uses' => 'cityController@delete',
-            'as' => 'deletecity',
-            'title' => 'حذف مدينة'
-        ]);
-
-        Route::post('/delete-cities', [
-            'uses' => 'cityController@deleteAll',
-            'as' => 'deletecities',
-            'title' => 'حذف اكتر من مدينة'
-        ]);
-
-        #neighborhood
-        Route::get('/neighborhoods', [
-            'uses' => 'neighborhoodController@index',
-            'as' => 'neighborhoods',
-            'title' => 'الحي',
-            'icon' => '<i class="fa fa-globe"></i>',
-            'child' => [
-                'addneighborhood',
-                'updateneighborhood',
-                'deleteneighborhood',
-                'deleteneighborhoods',
-            ]
-        ]);
-
-        Route::post('/add-neighborhood', [
-            'uses' => 'neighborhoodController@store',
-            'as' => 'addneighborhood',
-            'title' => 'اضافة الحي'
-        ]);
-
-        Route::post('/update-neighborhood', [
-            'uses' => 'neighborhoodController@update',
-            'as' => 'updateneighborhood',
-            'title' => 'تعديل الحي'
-        ]);
-
-        Route::post('/delete-neighborhood', [
-            'uses' => 'neighborhoodController@delete',
-            'as' => 'deleteneighborhood',
-            'title' => 'حذف الحي'
-        ]);
-
-        Route::post('/delete-neighborhoods', [
-            'uses' => 'neighborhoodController@deleteAll',
-            'as' => 'deleteneighborhoods',
-            'title' => 'حذف اكتر من الحي'
-        ]);
-
         #contact
         Route::get('/contacts', [
             'uses' => 'contactController@index',
@@ -386,6 +310,48 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
             'as' => 'deletecontacts',
             'title' => 'حذف اكتر من رسالة'
         ]);
+        #question
+        Route::get('/questions', [
+            'uses' => 'questionController@index',
+            'as' => 'questions',
+            'title' => 'الاسئلة الشائعة ',
+            'icon' => '<i class="fa fa-question"></i>',
+            'child' => [
+                'addquestion',
+                'updatequestion',
+                'deletequestion',
+                'deletequestions',
+            ]
+        ]);
+
+        // Add question
+        Route::post('/add-question', [
+            'uses' => 'questionController@store',
+            'as' => 'addquestion',
+            'title' => 'اضافة سؤال'
+        ]);
+
+        // Update question
+        Route::post('/update-question', [
+            'uses' => 'questionController@update',
+            'as' => 'updatequestion',
+            'title' => 'تعديل سؤال'
+        ]);
+
+        // Delete question
+        Route::post('/delete-question', [
+            'uses' => 'questionController@delete',
+            'as' => 'deletequestion',
+            'title' => 'حذف سؤال'
+        ]);
+
+        // Delete questions
+        Route::post('/delete-questions', [
+            'uses' => 'questionController@deleteAll',
+            'as' => 'deletequestions',
+            'title' => 'حذف اكتر من سؤال'
+        ]);
+
 
         // ======== Reports
         Route::get('all-reports', [

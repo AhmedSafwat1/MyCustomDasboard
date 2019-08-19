@@ -33,7 +33,7 @@
 
 @extends('dashboard.index')
 @section('title')
-    الأحياء
+    اسئلة متكررة
 @endsection
 @section('content')
 
@@ -41,7 +41,7 @@
 
         <div class=" btn-group-justified m-b-10">
             <a href="#add" class="btn btn-success waves-effect btn-lg waves-light" data-animation="fadein" data-plugin="custommodal"
-                data-overlaySpeed="100" data-overlayColor="#36404a">اضافة حي <i class="fa fa-plus"></i> </a>
+                data-overlaySpeed="100" data-overlayColor="#36404a">اضافة سؤال <i class="fa fa-plus"></i> </a>
             <a href="#deleteAll" class="btn btn-danger waves-effect btn-lg waves-light delete-all" data-animation="blur" data-plugin="custommodal"
                 data-overlaySpeed="100" data-overlayColor="#36404a">حذف المحدد <i class="fa fa-trash"></i> </a>
             <a class="btn btn-primary waves-effect btn-lg waves-light" onclick="window.location.reload()" role="button">تحديث الصفحة <i class="fa fa-refresh"></i> </a>
@@ -57,9 +57,7 @@
                             تحديد
                             <input type="checkbox" id="checkedAll" style="margin-right: 10px">
                         </th>
-                        <th>أسم الحي</th>
-                        <th>أسم المدينة</th>
-                        <th>أسم البلد</th>
+                        <th> السؤال</th>
                         <th>تاريخ التسجيل</th>
                         <th>التحكم</th>
                     </tr>
@@ -70,18 +68,18 @@
                             <td>
                                 <input type="checkbox" class="form-check-label checkSingle" id="{{$item->id}}">
                             </td>
-                            
-                            <td>{{$item->title}}</td>
-                            <td>{{$item->City->title}}</td>
-                            <td>{{$item->Country->title}}</td>
+
+                            <td>{{ $item->title_ar }}</td>
                             <td>{{$item->created_at->diffForHumans()}}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="#edit" class="edit btn btn-success" data-animation="fadein" data-plugin="custommodal"
                                         data-overlaySpeed="100" data-overlayColor="#36404a" style="color: #c89e28; font-weight: bold;"
                                         data-id = "{{$item->id}}"
-                                        data-title = "{{$item->title}}"
-                                        data-city_id = "{{$item->city_id}}"
+                                        data-title_ar = "{{$item->title_ar}}"
+                                        data-title_en = "{{$item->title_en}}"
+                                        data-desc_ar = "{{$item->desc_ar}}"
+                                        data-desc_en = "{{$item->desc_en}}"
                                     >
                                         <i class="fa fa-cogs"></i>
                                     </a>
@@ -108,27 +106,39 @@
             <span>&times</span><span class="sr-only" style="color: #f7f7f7">Close</span>
         </button>
         <h4 class="custom-modal-title" style="background-color: #36404a">
-            دولة جديدة
+            سؤال جديدة
         </h4>
-        <form action="{{route('addneighborhood')}}" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="{{route('addquestion')}}" method="post" autocomplete="off" enctype="multipart/form-data">
             {{csrf_field()}}
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <label for="field-1" class="control-label">اسم الحي</label>
-                            <input type="text" autocomplete="nope" name="title" required class="form-control">
+                            <label for="field-1" class="col-sm-4 control-label">السؤال بالعربية</label>
+                            <input type="text" autocomplete="nope" id="" name="title_ar" required class="form-control">
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <label for="field-1" class="control-label">اسم المدينة</label>
-                            <select name="city_id" class="form-control">
-                                <option value="">أختار المدينة التابعة لها</option>
-                                @foreach ($cities as $city)
-                                    <option value="{{$city->id}}">{{$city->title}} - {{$city->Country->title}}</option>
-                                @endforeach
-                            </select>
+                            <label for="field-1" class="col-sm-4 control-label">السؤال بالانجليزية</label>
+                            <input type="text" autocomplete="nope" id="" name="title_en" required class="form-control">
+                        </div>
+                    </div>  
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-4 control-label">الاجابة بالعربية</label>
+                                <textarea name="desc_ar" class="form-control" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-4 control-label">الاجابة بالانجليزية</label>
+                                <textarea name="desc_en" class="form-control" id="" cols="30" rows="10"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,26 +158,38 @@
         <h4 class="custom-modal-title" style="background-color: #36404a">
             تعديل <span id="itemname"></span>
         </h4>
-        <form action="{{route('updateneighborhood')}}" method="post" autocomplete="off" enctype="multipart/form-data">
+        <form action="{{route('updatequestion')}}" method="post" autocomplete="off" enctype="multipart/form-data">
             {{csrf_field()}}
             <input type="hidden" name="id" value="">
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <label for="field-1" class="control-label">اسم الحي</label>
-                            <input type="text" autocomplete="nope" name="title" required class="form-control">
+                            <label for="field-1" class="col-sm-4 control-label">السؤال بالعربية</label>
+                            <input type="text" autocomplete="nope" id="title_ar" name="title_ar" required class="form-control">
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group">
-                            <label for="field-1" class="control-label">اسم المدينة</label>
-                            <select name="city_id" class="form-control" id="city_id">
-                                <option value="">أختار المدينة التابعة لها</option>
-                                @foreach ($cities as $city)
-                                    <option value="{{$city->id}}">{{$city->title}} - {{$city->Country->title}}</option>
-                                @endforeach
-                            </select>
+                            <label for="field-1" class="col-sm-4 control-label">السؤال بالانجليزية</label>
+                            <input type="text" autocomplete="nope" id="title_en" name="title_en" required class="form-control">
+                        </div>
+                    </div>  
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-4 control-label">الاجابة بالعربية</label>
+                                <textarea name="desc_ar" id="desc_ar" class="form-control" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label class="col-sm-4 control-label">الاجابة بالانجليزية</label>
+                                <textarea name="desc_en" id="desc_en" class="form-control" id="" cols="30" rows="10"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,19 +205,18 @@
         <button type="button" class="close" onclick="Custombox.close();" style="opacity: 1">
             <span>&times</span><span class="sr-only" style="color: #f7f7f7">Close</span>
         </button>
-        <h4 class="custom-modal-title">حذف دولة</h4>
-        <div class="custombox-modal-container" style="width: 400px !important; height: 175px;">
+        <h4 class="custom-modal-title">حذف سؤال</h4>
+        <div class="custombox-modal-container" style=" height: 160px;">
             <div class="row">
                 <div class="col-sm-12">
                     <h3 style="margin-top: 35px">
                         هل تريد مواصلة عملية الحذف ؟
                     </h3>
-                    <span style="color: red">عند حذف حي يتم حذف العقارات التابعة لها !!</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="{{route('deleteneighborhood')}}" method="post">
+                    <form action="{{route('deletequestion')}}" method="post">
                         {{csrf_field()}}
                         <input type="hidden" name="delete_id" value="">
                         <button style="margin-top: 35px" type="submit" class="btn btn-danger btn-rounded w-md waves-effect waves-light m-b-5 send-delete-all"  style="margin-top: 19px">حـذف</button>
@@ -210,13 +231,12 @@
             <span>&times</span><span class="sr-only" style="color: #f7f7f7">Close</span>
         </button>
         <h4 class="custom-modal-title">حذف المحدد</h4>
-        <div class="custombox-modal-container" style="width: 400px !important; height: 175px;">
+        <div class="custombox-modal-container" style=" height: 160px;">
             <div class="row">
                 <div class="col-sm-12">
                     <h3 style="margin-top: 35px">
                         هل تريد مواصلة عملية الحذف ؟
                     </h3>
-                    <span style="color: red">عند حذف حي يتم حذف العقارات التابعة لها !!</span>
                 </div>
             </div>
             <div class="row">
@@ -232,15 +252,36 @@
 @section('script')
 
     <script>
+        {{--function changeChecked(id) {--}}
+        {{--    var tokenv  = "{{csrf_token()}}";--}}
+        {{--    $.ajax({--}}
+        {{--        type     : 'POST',--}}
+        {{--        url      : '{{ route('change-activation') }}' ,--}}
+        {{--        datatype : 'json' ,--}}
+        {{--        data     : {--}}
+        {{--            'id'         :  id ,--}}
+        {{--            '_token'     :  tokenv--}}
+        {{--        }, success   : function(msg){--}}
+        {{--            //success here--}}
+        {{--            if(msg == 0)--}}
+        {{--                return false;--}}
+        {{--        }--}}
+        {{--    });--}}
+        {{--}--}}
+
         $('.edit').on('click',function(){
             //get valus
-            let id          = $(this).data('id');
-            let title       = $(this).data('title');
-            let city_id  = $(this).data('city_id');
+            let id            = $(this).data('id');
+            let title_ar      = $(this).data('title_ar');
+            let title_en      = $(this).data('title_en');
+            let desc_ar       = $(this).data('desc_ar');
+            let desc_en       = $(this).data('desc_en');
 
             $("input[name='id']").val(id);
-            $("#title").val(title);
-            $("#city_id").val(city_id);
+            $("#title_ar").val(title_ar);
+            $("#title_en").val(title_en);
+            $("#desc_ar").html(desc_ar);
+            $("#desc_en").html(desc_en);
         });
 
         $('.delete').on('click',function(){
@@ -290,7 +331,7 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "{{route('deleteneighborhoods')}}",
+                    url: "{{route('deletequestions')}}",
                     data: {data: requestData, _token: '{{csrf_token()}}'},
                     success: function( msg ) {
                         if (msg == 'success') {

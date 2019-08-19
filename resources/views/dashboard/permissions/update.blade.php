@@ -32,14 +32,14 @@
                                 <div class="form-group">
                                     <label class="col-md-2" for="example-email">الصلاحية</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control" value="{{$role->role}}" required name="role">
+                                        <input type="text" id="role" class="form-control" value="{{$role->role}}" required name="role">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <hr>
                         {{EditPermissions($role->id)}}
-                        <button type="submit" class="btn btn-block btn-success btn-rounded waves-effect waves-light w-md m-b-5"><span style="font-weight: bolder;font-size: 15px">تعديل</span></button>
+                        <button type="submit" id="send" class="btn btn-block btn-success btn-rounded waves-effect waves-light w-md m-b-5"><span style="font-weight: bolder;font-size: 15px">تعديل</span></button>
                     </form>
                 </div>
 
@@ -57,33 +57,76 @@
                 $(".per_" + id).each(function(){
                     this.checked=true
                 })
+                $(".label_" + id).each(function(){
+                    this.style='';
+                })
             }else{
                 $(".per_" + id).each(function(){
                     this.checked=false;
                 })
+                $(".label_" + id).each(function(){
+                    this.style='display:none';
+                })
             }
         });
 
-	    $(document).ready(function () {
-		    var check = true;
-		    $(".checkSingle").each(function(){
-			    if (this.checked == false) {
-				    check = false;
-			    }
-		    });
-		    if (check) {
-			    $("#checkedAll").attr('checked', true);
-		    }
-	    });
+        $('#send').on('click', function (event) {
+            var permissions = [];
+            $('.checkSingle:checked').each(function (index, el) {
+                permissions.push($(el).val());
+            });
+            var role = $('#role').val();
+            if (role === '') {
+                ajaxSuccess();
+                Swal.fire({
+                    html: '<h4>اسم الصلاحية مطلوب</h4>',
+                    type: 'error',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+                event.preventDefault();
+                return false;
+            }
+
+            if (permissions.length === 0) {
+                ajaxSuccess();
+                Swal.fire({
+                    html: '<h4>قم بإختيار صلاحية واحدة على الأقل</h4>',
+                    type: 'error',
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+                event.preventDefault();
+                return false;
+            }
+        });
+
+        $(document).ready(function () {
+            var check = true;
+            $(".checkSingle").each(function(){
+                if (this.checked == false) {
+                    check = false;
+                }
+            });
+            if (check) {
+                $("#checkedAll").attr('checked', true);
+            }
+        });
 
         $("#checkedAll").change(function(){
             if(this.checked){
                 $(".checkSingle").each(function(){
                     this.checked=true
                 })
+                $(".allLabel").each(function(){
+                    this.style='';
+                })
             }else{
                 $(".checkSingle").each(function(){
                     this.checked=false;
+                })
+                $(".allLabel").each(function(){
+                    this.style='display:none';
                 })
             }
         });

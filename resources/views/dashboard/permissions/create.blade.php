@@ -38,15 +38,15 @@
                         {{permissions()}}
                         <div class="form-row text-center">
                             <div class="col-12">
-                                <button 
-                                    style="font-weight: bolder;font-size: 15px;" 
-                                    type="button" 
-                                    id="send"
-                                    class="btn btn-success btn-rounded waves-effect waves-light w-md m-b-5">
+                                <button
+                                        style="font-weight: bolder;font-size: 15px;"
+                                        type="button"
+                                        id="send"
+                                        class="btn btn-success btn-rounded waves-effect waves-light w-md m-b-5">
                                     حــفــظ
                                 </button>
                             </div>
-                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -61,15 +61,21 @@
 
         $('.per_parent').change(function () {
             var id = $(this).attr('id');
-	        if(this.checked){
-		        $(".per_" + id).each(function(){
-			        this.checked=true
-		        })
-	        }else{
-		        $(".per_" + id).each(function(){
-			        this.checked=false;
-		        })
-	        }
+            if(this.checked){
+                $(".per_" + id).each(function(){
+                    this.checked=true
+                })
+                $(".label_" + id).each(function(){
+                    this.style='';
+                })
+            }else{
+                $(".per_" + id).each(function(){
+                    this.checked=false;
+                })
+                $(".label_" + id).each(function(){
+                    this.style='display:none';
+                })
+            }
         });
 
         $("#checkedAll").change(function(){
@@ -77,9 +83,15 @@
                 $(".checkSingle").each(function(){
                     this.checked=true
                 })
+                $(".allLabel").each(function(){
+                    this.style='';
+                })
             }else{
                 $(".checkSingle").each(function(){
                     this.checked=false;
+                })
+                $(".allLabel").each(function(){
+                    this.style='display:none';
                 })
             }
         });
@@ -109,7 +121,7 @@
                     html: '<h4>اسم الصلاحية مطلوب</h4>',
                     type: 'error',
                     showConfirmButton: false,
-		            timer: 2000
+                    timer: 2000
                 });
                 return;
             }
@@ -120,7 +132,7 @@
                     html: '<h4>قم بإختيار صلاحية واحدة على الأقل</h4>',
                     type: 'error',
                     showConfirmButton: false,
-		            timer: 2000
+                    timer: 2000
                 });
                 return;
             }
@@ -135,7 +147,7 @@
                 ajaxSuccess();
                 // console.log(res)
                 if(res === 1) {
-                    window.location.assign('{{route("permissionslist")}}')   
+                    window.location.assign('{{route("permissionslist")}}')
                 }
             }).error(function (err) {
                 console.log(err);

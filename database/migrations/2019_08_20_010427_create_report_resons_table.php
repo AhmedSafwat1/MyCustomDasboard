@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAppSeetingsTable extends Migration
+class CreateReportResonsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,12 @@ class CreateAppSeetingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('app_settings', function (Blueprint $table) {
+        Schema::create('report_resons', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('key');
-            $table->longText('value');
+            $table->string('title_ar')->nullable();
+            $table->string('title_en')->nullable();
             $table->timestamps();
         });
-
-        $setting = new \App\Models\AppSetting();
-        $setting->key = 'site_name';
-        $setting->value = 'اوامر الشبكة';
-        $setting->save();
     }
 
     /**
@@ -33,6 +28,6 @@ class CreateAppSeetingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('app_seetings');
+        Schema::dropIfExists('report_resons');
     }
 }
